@@ -7,13 +7,13 @@
   display: flex; }
 
 body {
-  background-color: #21232E; }
+  background-color: #FFFFFF; }
 
 header {
   background-color: #ffffff;
   font-family: "Source Sans Pro", sans-serif; }
   header .header-wrap {
-    background: url(../img/m-h-night.jpg);
+    background: url(../img/m-h-day.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,7 +33,7 @@ header {
         font-weight: 600;
         font-size: 25px;
         padding-left: 15px;
-        font-family: "Fresca", sans-serif;
+        font-family: "Hind", sans-serif;
         opacity: 0.75;
         line-height: 1.2; }
         header .header-wrap .landing-logo p span {
@@ -51,29 +51,29 @@ header {
     header .header-wrap .header_heading::after {
       display: block;
       content: '';
-      background: #FF4E33;
+      background: #14A0C7;
       position: absolute;
       margin: -20px 0;
       z-index: -1;
       width: 253px;
       height: 20px; }
     header .header-wrap .header_text {
-      font-family: "Fresca", sans-serif;
+      font-family: "Hind", sans-serif;
       padding-bottom: 80px;
       opacity: 0.8;
       white-space: pre-line; }
     header .header-wrap .header_button {
       width: 150px;
       height: 50px;
-      background-color: #E3AC00;
+      background-color: #699900;
       border: transparent;
       border-radius: 5px;
       font-family: "Source Sans Pro", sans-serif;
-      color: #21232E;
+      color: #FFFFFF;
       font-weight: bold;
       font-size: 18px; }
     header .header-wrap .header_button:hover {
-      background-color: #b08500; }
+      background-color: #466600; }
 
 .section {
   display: flex;
@@ -88,7 +88,7 @@ header {
   .section .section_text::after {
     display: block;
     content: '';
-    background: #FF4E33;
+    background: #14A0C7;
     position: absolute;
     margin: -20px 0;
     z-index: -1;
@@ -103,7 +103,7 @@ header {
     margin: 0 10%; }
     .section .section_card_wrap .section_card {
       width: 27%;
-      background-color: #3B3F50;
+      background-color: #21232E;
       border-radius: 5px;
       color: #ffffff;
       text-align: center; }
@@ -122,13 +122,13 @@ header {
         content: '';
         width: 118px;
         height: 10px;
-        background: #FF4E33;
+        background: #14A0C7;
         position: relative;
         z-index: -1;
         left: 93px;
         bottom: 8px; }
       .section .section_card_wrap .section_card .section_card_text {
-        font-family: "Fresca", sans-serif;
+        font-family: "Hind", sans-serif;
         margin: 4%;
         font-size: 12px; }
     .section .section_card_wrap .section_card:nth-child(2) .section_card_underline {
@@ -148,7 +148,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    background: linear-gradient(45deg, linearGrad1 25%, linearGrad2 50%, linearGrad3 75%, linearGrad4 100%); }
+    background: linear-gradient(45deg, #679704 25%, #507F5A 50%, #417090 75%, #305ecf 100%); }
     .section .section_banner .section_banner_text_wrap {
       font-family: "Source Sans Pro", sans-serif; }
       .section .section_banner .section_banner_text_wrap .section_banner_heading {
@@ -161,7 +161,7 @@ header {
         content: '';
         width: 62px;
         height: 10px;
-        background: #FF4E33;
+        background: #14A0C7;
         position: relative;
         z-index: -1;
         left: 110px;
@@ -174,16 +174,16 @@ header {
     .section .section_banner .section_banner_button {
       width: 150px;
       height: 50px;
-      background-color: #E3AC00;
+      background-color: #699900;
       border: transparent;
       border-radius: 5px;
       font-family: "Source Sans Pro", sans-serif;
-      color: #21232E;
+      color: #FFFFFF;
       font-weight: bold;
       font-size: 18px; }
 
 .footer {
-  background-color: #3B3F50;
+  background-color: #21232E;
   width: 100%;
   height: 250px;
   color: #ffffff;
@@ -198,7 +198,7 @@ header {
     opacity: 0.75;
     justify-content: space-between;
     align-items: center;
-    font-family: "Fresca", sans-serif; }
+    font-family: "Hind", sans-serif; }
     .footer .footer-wrap .footer_logo {
       flex-direction: row;
       align-items: center; }

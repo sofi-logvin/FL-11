@@ -148,7 +148,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    background: linear-gradient(45deg, linearGrad1 25%, linearGrad2 50%, linearGrad3 75%, linearGrad4 100%); }
+    background: linear-gradient(45deg, #E1A803 25%, #C9831A 50%, #AF5A35 75%, #942E51 100%); }
     .section .section_banner .section_banner_text_wrap {
       font-family: "Source Sans Pro", sans-serif; }
       .section .section_banner .section_banner_text_wrap .section_banner_heading {
