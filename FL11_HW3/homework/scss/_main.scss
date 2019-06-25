@@ -1,0 +1,267 @@
+// @import 'variables1';
+@import 'variables2';
+
+@mixin mainBackgrnd {
+  background: $headerBackground;  
+  height:100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@mixin underlining {
+  display: block;
+  content: '';
+  background: $underlineColor;
+  position: absolute;
+  margin: -20px 0;
+  z-index: -1;  
+}
+* {
+  margin: 0;
+  padding: 0; 
+}
+%logo{
+  z-index: 1;
+  display: flex;
+}
+body{
+  background-color: $backgroundColor;
+}
+header {
+  background-color: #ffffff;
+  font-family: $font1;
+ 
+  .header-wrap{
+    @include mainBackgrnd;
+    border-bottom-right-radius: 45%;
+    z-index: -1;
+    display: flex;
+    padding: 3% 40% 0 10%;
+    flex-direction: column;
+  
+    .landing-logo{
+      z-index: 1;
+      display: flex;
+      p{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 600;
+        font-size: 25px;
+        padding-left: 15px;
+        font-family: $font2;
+        opacity: 0.75;
+        line-height: 1.2;
+        span{
+          font-weight: 100;
+          font-size: 10px;
+        }
+      }
+    }
+    .header_heading{
+      padding: 90px 0 90px 0;
+      margin: 0 0 -10px 0;
+      font-size: 60px;
+      font-weight: bold;
+      line-height: 100%;
+      width: 450px;
+      z-index: 1;
+      opacity: 0.95;
+    }
+    .header_heading::after {
+      @include underlining;
+      width: 253px;
+      height: 20px;
+      }
+    .header_text{
+      font-family: $font2;
+      padding-bottom: 80px;
+      opacity: 0.8;
+      white-space: pre-line;
+    }
+    .header_button{
+      width:150px;
+      height: 50px;
+      background-color: $buttonColor;
+      border: transparent;
+      border-radius: 5px;
+      font-family: $font1;
+      color: $backgroundColor;
+      font-weight: bold;
+      font-size:18px;
+    }
+    .header_button:hover{
+      background-color: darken($color:$buttonColor, $amount: 10);
+    }
+  }
+}
+
+.section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .section_text{
+    font-size: 20px;
+    font-family: $font1;
+    padding: 50px 0 45px 0;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .section_text::after{
+    @include underlining;
+    margin: -19px 0;
+    width: 182px;
+    height: 10px;
+    left: 50.5%;
+  }
+  .section_card_wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 10%;
+    .section_card{
+      width: map-get($card-info,"card_width");
+      background-color: $cardBackgroundColor;
+      border-radius: map-get($card-info,"card_radius");
+      color: map-get($card-info,"card_color");
+      text-align: center;
+
+      .section_card_img {
+        margin: 4% 4% 0 4%;
+        border-radius: 5px;
+        width: 90%
+      }
+      .section_card_heading{
+        font-family: $font1;
+        margin: 4%;
+        z-index: 0;
+        position: relative;
+        z-index: 1;
+      }
+      .section_card_underline {
+        display: block;
+        content: '';
+        width: 118px;
+        height: 10px;
+        background: $underlineColor;
+        position: relative;
+        z-index: -1;
+        left:93px;
+        bottom: 8px;
+      }
+      .section_card_text{
+        font-family: $font2;
+        margin: 4%;
+        font-size: 12px;
+      }
+    }
+    .section_card:nth-child(2) {
+      .section_card_underline {
+        width: 100px;
+        left:100px;
+      }
+    }
+    .section_card:nth-child(3) {
+      .section_card_underline {
+        width: 80px;
+        left:110px;
+      }
+  }
+  }
+  .section_banner{
+    position: absolute;
+    z-index: 2;
+    top: 1400px;
+    border-radius: 5px;
+    width: 950px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(45deg, linearGrad1 25%, linearGrad2 50%, linearGrad3 75%, linearGrad4 100%);
+    .section_banner_text_wrap{
+      font-family: $font1;
+      .section_banner_heading{
+        font-size: 28px;
+        font-weight: 700;
+        color: #000000;
+        opacity: 0.9;
+      }
+      .section_banner_heading::after {
+        display: block;
+        content: '';
+        width: 62px;
+        height: 10px;
+        background: $underlineColor;
+        position: relative;
+        z-index: -1;
+        left: 110px;
+        bottom: 14px;
+        }
+      .section_banner_text{
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffffff;
+        opacity: 0.9;
+      }
+    }
+    .section_banner_button{
+      width:150px;
+      height: 50px;
+      background-color: $buttonColor;
+      border: transparent;
+      border-radius: 5px;
+      font-family: $font1;
+      color: $backgroundColor;
+      font-weight: bold;
+      font-size:18px;
+    }
+  }
+}
+.footer{
+  background-color: $footerBackgroundcolor;
+  width: 100%;
+  height: 250px;
+  color: #ffffff;
+  display: flex;
+  margin-top: 195px;
+  flex-direction: row;
+  .footer-wrap{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 125px 8% 50px 10%;
+    opacity: 0.75;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font2;
+    .footer_logo {
+      @extend %logo;
+      flex-direction: row;
+      align-items: center;
+      p{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 600;
+        font-size: 20px;
+        padding-left: 15px;
+        line-height: 1.2;
+        span{
+          font-weight: 100;
+          font-size: 10px;
+        }
+      }
+    }
+    .footer_text{
+      width: 25%;
+      font-size: 14px;
+    }
+    .footer-cr{
+      width: 20%;
+      font-size: 16px;
+    }
+  }
+}
+
