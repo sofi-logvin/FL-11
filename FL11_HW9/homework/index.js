@@ -167,7 +167,9 @@ getAmountOfAdultPeople(data);
 function keys(someObj) {
   const objectKeys = [];
   for (let key in someObj) {
-    objectKeys.push(key);
+    if (someObj.hasOwnProperty(key)) {
+      objectKeys.push(key);
+    }
   }
   return objectKeys;
 }
@@ -177,8 +179,10 @@ keys({keyOne: 1, keyTwo: 2, keyThree: 3});
 //Task 10
 function values(someObj) {
   const objectValues = [];
-  for (let value in someObj) {
-    objectValues.push(someObj[value]);
+  for (let key in someObj) {
+    if (someObj.hasOwnProperty(key)) {
+      objectValues.push(someObj[key]);
+    }
   }
   return objectValues;
 }
