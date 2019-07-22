@@ -30,12 +30,8 @@ class Fighter {
   }
   attack(defender) {
     let attackProbability = Math.round(Math.random() * 100);
-    console.log(attackProbability);
-    // const successfullAttackProbability = probability - defender.getAgility;
-    // let defendersHealthAmount = defender.getHealth;
+    console.log(attackProbability);   
     if (attackProbability > defender.getAgility) {
-      // let defendersHealth = defender.getHealth - this.getDamage;
-      // defender.dealDamage(defender.getHealth);
       defender.dealDamage(this.getDamage);
       console.log(` ${this.getName} make ${this.getDamage}  damage to ${defender.getName}`);
     } else {
